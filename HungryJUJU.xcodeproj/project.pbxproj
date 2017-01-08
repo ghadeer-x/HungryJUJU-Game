@@ -8,26 +8,38 @@
 
 /* Begin PBXBuildFile section */
 		6B1CC2201E2224A000057DA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1CC21F1E2224A000057DA5 /* AppDelegate.swift */; };
-		6B1CC2221E2224A000057DA5 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6B1CC2211E2224A000057DA5 /* GameScene.sks */; };
-		6B1CC2241E2224A000057DA5 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 6B1CC2231E2224A000057DA5 /* Actions.sks */; };
 		6B1CC2261E2224A000057DA5 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1CC2251E2224A000057DA5 /* GameScene.swift */; };
 		6B1CC2281E2224A000057DA5 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1CC2271E2224A000057DA5 /* GameViewController.swift */; };
 		6B1CC22B1E2224A000057DA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B1CC2291E2224A000057DA5 /* Main.storyboard */; };
 		6B1CC22D1E2224A000057DA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B1CC22C1E2224A000057DA5 /* Assets.xcassets */; };
 		6B1CC2301E2224A000057DA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B1CC22E1E2224A000057DA5 /* LaunchScreen.storyboard */; };
+		6B1CC23C1E222D4000057DA5 /* GameSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1CC23B1E222D4000057DA5 /* GameSettings.swift */; };
+		6B1CC23E1E222E7B00057DA5 /* SKTexturePreload.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1CC23D1E222E7B00057DA5 /* SKTexturePreload.swift */; };
+		6B1CC2401E22367E00057DA5 /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1CC23F1E22367E00057DA5 /* Sound.swift */; };
+		6B1CC2421E22380700057DA5 /* MenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1CC2411E22380700057DA5 /* MenuScene.swift */; };
+		6B1CC2441E2238AF00057DA5 /* GlobalScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1CC2431E2238AF00057DA5 /* GlobalScene.swift */; };
+		6B1CC2461E223B7000057DA5 /* ButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1CC2451E223B7000057DA5 /* ButtonNode.swift */; };
+		6B1CC2481E223C2C00057DA5 /* SimpleNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1CC2471E223C2C00057DA5 /* SimpleNode.swift */; };
+		6B1CC2521E22865000057DA5 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B1CC2511E22865000057DA5 /* Settings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6B1CC21C1E2224A000057DA5 /* HungryJUJU.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HungryJUJU.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B1CC21F1E2224A000057DA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6B1CC2211E2224A000057DA5 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		6B1CC2231E2224A000057DA5 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
 		6B1CC2251E2224A000057DA5 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		6B1CC2271E2224A000057DA5 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		6B1CC22A1E2224A000057DA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6B1CC22C1E2224A000057DA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6B1CC22F1E2224A000057DA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6B1CC2311E2224A000057DA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B1CC23B1E222D4000057DA5 /* GameSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameSettings.swift; sourceTree = "<group>"; };
+		6B1CC23D1E222E7B00057DA5 /* SKTexturePreload.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKTexturePreload.swift; sourceTree = "<group>"; };
+		6B1CC23F1E22367E00057DA5 /* Sound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
+		6B1CC2411E22380700057DA5 /* MenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuScene.swift; sourceTree = "<group>"; };
+		6B1CC2431E2238AF00057DA5 /* GlobalScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalScene.swift; sourceTree = "<group>"; };
+		6B1CC2451E223B7000057DA5 /* ButtonNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonNode.swift; sourceTree = "<group>"; };
+		6B1CC2471E223C2C00057DA5 /* SimpleNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleNode.swift; sourceTree = "<group>"; };
+		6B1CC2511E22865000057DA5 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,10 +72,10 @@
 		6B1CC21E1E2224A000057DA5 /* HungryJUJU */ = {
 			isa = PBXGroup;
 			children = (
+				6B1CC2501E227F6D00057DA5 /* other */,
+				6B1CC24F1E227F4A00057DA5 /* Nodes */,
+				6B1CC24E1E227EAA00057DA5 /* Scenes */,
 				6B1CC21F1E2224A000057DA5 /* AppDelegate.swift */,
-				6B1CC2211E2224A000057DA5 /* GameScene.sks */,
-				6B1CC2231E2224A000057DA5 /* Actions.sks */,
-				6B1CC2251E2224A000057DA5 /* GameScene.swift */,
 				6B1CC2271E2224A000057DA5 /* GameViewController.swift */,
 				6B1CC2291E2224A000057DA5 /* Main.storyboard */,
 				6B1CC22C1E2224A000057DA5 /* Assets.xcassets */,
@@ -71,6 +83,36 @@
 				6B1CC2311E2224A000057DA5 /* Info.plist */,
 			);
 			path = HungryJUJU;
+			sourceTree = "<group>";
+		};
+		6B1CC24E1E227EAA00057DA5 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				6B1CC2251E2224A000057DA5 /* GameScene.swift */,
+				6B1CC2411E22380700057DA5 /* MenuScene.swift */,
+				6B1CC2431E2238AF00057DA5 /* GlobalScene.swift */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+		6B1CC24F1E227F4A00057DA5 /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				6B1CC2451E223B7000057DA5 /* ButtonNode.swift */,
+				6B1CC2471E223C2C00057DA5 /* SimpleNode.swift */,
+			);
+			name = Nodes;
+			sourceTree = "<group>";
+		};
+		6B1CC2501E227F6D00057DA5 /* other */ = {
+			isa = PBXGroup;
+			children = (
+				6B1CC23D1E222E7B00057DA5 /* SKTexturePreload.swift */,
+				6B1CC23B1E222D4000057DA5 /* GameSettings.swift */,
+				6B1CC23F1E22367E00057DA5 /* Sound.swift */,
+				6B1CC2511E22865000057DA5 /* Settings.swift */,
+			);
+			name = other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,10 +176,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B1CC22B1E2224A000057DA5 /* Main.storyboard in Resources */,
-				6B1CC2221E2224A000057DA5 /* GameScene.sks in Resources */,
 				6B1CC22D1E2224A000057DA5 /* Assets.xcassets in Resources */,
 				6B1CC2301E2224A000057DA5 /* LaunchScreen.storyboard in Resources */,
-				6B1CC2241E2224A000057DA5 /* Actions.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,9 +188,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6B1CC23C1E222D4000057DA5 /* GameSettings.swift in Sources */,
+				6B1CC2401E22367E00057DA5 /* Sound.swift in Sources */,
 				6B1CC2261E2224A000057DA5 /* GameScene.swift in Sources */,
+				6B1CC2441E2238AF00057DA5 /* GlobalScene.swift in Sources */,
+				6B1CC2421E22380700057DA5 /* MenuScene.swift in Sources */,
 				6B1CC2281E2224A000057DA5 /* GameViewController.swift in Sources */,
 				6B1CC2201E2224A000057DA5 /* AppDelegate.swift in Sources */,
+				6B1CC23E1E222E7B00057DA5 /* SKTexturePreload.swift in Sources */,
+				6B1CC2461E223B7000057DA5 /* ButtonNode.swift in Sources */,
+				6B1CC2521E22865000057DA5 /* Settings.swift in Sources */,
+				6B1CC2481E223C2C00057DA5 /* SimpleNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
