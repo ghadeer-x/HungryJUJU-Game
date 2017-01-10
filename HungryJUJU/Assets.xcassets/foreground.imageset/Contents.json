@@ -2,7 +2,7 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "singleMode.png",
+      "filename" : "foreground.png",
       "scale" : "1x"
     },
     {

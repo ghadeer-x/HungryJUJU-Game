@@ -9,36 +9,68 @@
 import SpriteKit
 import GameplayKit
 
-class MenuScene:  GlobalScene {
-    
-     override init(size: CGSize) {
-        super.init(size: size)
+class MenuScene:  MainScene {
+   
+     override init(size: CGSize , delegate: GameSceneDelegate!){
+        super.init(size:size)
+        if let gamedelegate = delegate {
+        gameSceneDelegate = gamedelegate
+        }
     }
+    
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    //MARK: Nodes
-   
+     fileprivate let MenuNodes = SKNode()
     
-    fileprivate let buttonStart = ButtonNode(
-        textureSimpleState: GraphicPreloadsGameScene.preload.buttonStart_simple,
-        texturePressedState: GraphicPreloadsGameScene.preload.buttonStart_pressed,
-        position: Img.position.buttonStart,
-        zPosition: Img.zPosition.buttonStart)
+     fileprivate let logo = GNode(
+        texture: MenuScenePreloads.preload.logo,
+        position: MenuImg.position.logo,
+        zPosition:Layer.ui.rawValue)
+    
+    //MARK: Nodes
+    fileprivate let playButton = GButton(
+        texture: MenuScenePreloads.preload.playButton,
+        position: MenuImg.position.playButton,
+        zPosition: Layer.ui.rawValue)
+    
+    fileprivate let multiplayerButton = GButton(
+        texture: MenuScenePreloads.preload.multiplayerButton,
+        position: MenuImg.position.multiplayerButton,
+        zPosition: Layer.ui.rawValue)
+    
+    fileprivate let gameCenterButton = GButton(
+        texture: MenuScenePreloads.preload.gameCenterButton,
+        position: MenuImg.position.gameCenterButton,
+        zPosition: Layer.ui.rawValue)
+    
+    fileprivate let infoButton = GButton(
+        texture: MenuScenePreloads.preload.infoButton,
+        position: MenuImg.position.infoButton,
+        zPosition: Layer.ui.rawValue)
+    
     
         //MARK: - Scene life cycle
     override func didMove(to view: SKView) {
-        //Settings node
-      
-        self.backgroundColor = General.backgroundColor
         
-        self.table.anchorPoint = CGPoint.zero
-        //Add nodes to scene
-        self.addChild(kitchen)
-        self.addChild(table)
-        self.addChild(buttonStart)
+        super.didMove(to: view)
+        //self.backgroundColor = General.backgroundColor
+        
+        UserDefaults.standard.set(sceneName.menu.rawValue, forKey: "currentScene")
+        
+        self.juju.position.y = table.size.height +  juju.size.height/2
+        
+        //Add nodes
+        self.addChild(MenuNodes)
+        self.MenuNodes.addChild(juju)
+        self.MenuNodes.addChild(logo)
+        self.MenuNodes.addChild(playButton)
+        self.MenuNodes.addChild(multiplayerButton )
+        self.MenuNodes.addChild(gameCenterButton)
+        self.MenuNodes.addChild(infoButton)
+        self.MenuNodes.addChild(foreground)
     }
     
     //MARK: - Input
@@ -47,8 +79,17 @@ class MenuScene:  GlobalScene {
         for touch in touches {
             let location = touch.location(in: self)
             
-            if buttonStart.contains(location) {
-                buttonStart.touchDown()
+            if playButton.contains(location) {
+                playButton.touchDown()
+            }
+            if multiplayerButton.contains(location) {
+                multiplayerButton.touchDown()
+            }
+            if gameCenterButton.contains(location) {
+               gameCenterButton.touchDown()
+            }
+            if infoButton.contains(location) {
+                infoButton.touchDown()
             }
         }
     }
@@ -57,31 +98,37 @@ class MenuScene:  GlobalScene {
         for touch in touches {
             let location = touch.location(in: self)
             
-            //Change button state to simple
-            buttonStart.touchUp()
-           // buttonRateUs.touchUp()
+            //Change button state
+            playButton.touchUp()
+            multiplayerButton.touchUp()
+            gameCenterButton.touchUp()
+            infoButton.touchUp()
             
-            if buttonStart.contains(location) {
+            if playButton.contains(location) {
                 //If play at first time show tutorial
                 if UserDefaults.standard.bool(forKey: "ShowTutorial") {
                     UserDefaults.standard.set(false, forKey: "ShowTutorial")
-                    UserDefaults.standard.set(true, forKey: "_pressToStart")
-                    
-                    //changeSceneTo(sceneName.tutorial, withTransitionName: transitionName.pushLeft)
+                  
+                    changeSceneTo(sceneName.tutorial, transitionName: transitionName.moveLeft)
                 }
                 else {
-                   // changeSceneTo(sceneName.game, withTransitionName: transitionName.pushLeft)
+                   changeSceneTo(sceneName.gameSingle, transitionName: transitionName.pushRight)
                 }
             }
             else {
                 UserDefaults.standard.set(false, forKey: "_pressToStart")
             }
-           /* if buttonRateUs.contains(location) {
-                NotificationCenter.default.post(name: Notification.Name(rawValue: "rateUs"), object: nil)
+            if  multiplayerButton.contains(location) {
+                 changeSceneTo(sceneName.gameMultiplayer, transitionName: transitionName.pushRight)
             }
-            if buttonGameCenter.contains(location) {
+            if gameCenterButton.contains(location) {
                 NotificationCenter.default.post(name: Notification.Name(rawValue: "showLeaderboard"), object: nil)
-            }*/
+            }
+            if infoButton.contains(location) {
+                if let url = URL(string: "https://www.hackingwithswift.com") {
+                    UIApplication.shared.open(url, options: [:])
+                }
+            }
            
         }
     }

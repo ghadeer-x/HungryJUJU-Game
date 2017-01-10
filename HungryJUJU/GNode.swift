@@ -1,5 +1,5 @@
 //
-//  SimpleNode.swift
+//  GNode.swift
 //  HungryJUJU
 //
 //  Created by Ghadeer Alkhathlan on 1/8/17.
@@ -8,7 +8,7 @@
 
 import SpriteKit
 
-class SimpleNode: SKSpriteNode {
+class GNode: SKSpriteNode {
     
     //MARK: - Initialisation
     init(imageName: String, position: CGPoint, zPosition: CGFloat) {
@@ -22,7 +22,7 @@ class SimpleNode: SKSpriteNode {
         super.init(texture: texture , color: UIColor.clear, size: texture.size())
         self.position = position
         self.zPosition = zPosition
-
+        
     }
     
     
